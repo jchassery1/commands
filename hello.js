@@ -1,18 +1,15 @@
 #!/usr/bin/env node
 
-console.log(`HELLO ${process.argv[2]}`)
+// console.log(`HELLO ${process.argv[2]}`)
 
-// Dependencies
 const imageToAscii = require("image-to-ascii");
 
-// The path can be either a local path or an url
-imageToAscii("https://octodex.github.com/images/octofez.png", (err, converted) => {
+if (process.argv[2] === 'dog') {
+  imageToAscii("https://octodex.github.com/images/octofez.png", (err, converted) => {
     console.log(err || converted);
-});
-
-// Passing options
-imageToAscii("https://octodex.github.com/images/privateinvestocat.jpg", {
-    colored: false
-}, (err, converted) => {
+  });
+} else if (process.argv[2] === 'cat') {
+  imageToAscii("https://img.clipartfest.com/3527dc16299af741e07ed8c3b8671203_tag-cat-clipart-clipart-cat-clipart-png_2400-2362.png", (err, converted) => {
     console.log(err || converted);
-});
+  });
+}
