@@ -1,6 +1,13 @@
 #!/usr/bin/env node
+// Typically, when executing NodeJS files, we tell the system to use the
+// appropriate interpreter by prefixing node before the file. However, we
+// want to be able to execute our CLI app globally from anywhere in the
+// system, and without having to specify the node interpreter every time.
+// Therefore, our first line is the shebang expression.
 
-// console.log(`HELLO ${process.argv[2]}`)
+// pure javascript code after shebang expression
+console.log(`HELLO ${process.argv[2]}`)
+
 
 const imageToAscii = require("image-to-ascii");
 
