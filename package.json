@@ -8,7 +8,8 @@
   },
   "bin": {
     "hello": "hello.js",
-    "dog": "dog.js"
+    "dog": "dog.js",
+    "print-photo": "print-photo.js"
   },
   "keywords": [],
   "author": "",
